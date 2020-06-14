@@ -72,13 +72,17 @@ footer{background-color: #007ecc;}   /* red */
     // TO MAKE THE MAP APPEAR YOU MUST
     // ADD YOUR ACCESS TOKEN FROM
     // https://account.mapbox.com
-    mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FwcGllIiwiYSI6ImNrYmY0MHlhbTBtNWUydHAyYzNvOTdmdDEifQ.X8L3gYbxMMUQ3be2AirG1Q';
+mapboxgl.accessToken = 'pk.eyJ1IjoidGVzdG1hcGV0YyIsImEiOiJja2JmNWZjaTAwOGZxMnltemxhdTd1ZnU0In0.Mvwfpta54PsNjsPoTvoWhQ';
 var map = new mapboxgl.Map({
 container: 'map',
-style: 'mapbox://styles/mapbox/streets-v11',
-center: [52.33379, 4.86576],
-zoom: 100
+style: 'mapbox://styles/testmapetc/ckbf5la8e3tgu1io48wt7b1lb',
+center: [4.86576,52.33379],
+zoom: 15
 });
+
+var room = new mapboxgl.Marker()
+.setLngLat([4.865484,52.333135])
+.addTo(map);
 
 map.addControl(
 new MapboxDirections({
