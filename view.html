@@ -15,7 +15,22 @@ footer{background-color: #007ecc;}   /* red */
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
 
+      #map {
+        position: absolute;
+        /* top: 0;
+        bottom: 0; */
+        width: 80%;
+        height: 50%;
+      }
+    </style>
 
 <body style="max-width:600px">
 
@@ -44,6 +59,58 @@ footer{background-color: #007ecc;}   /* red */
     <i class="fa fa-coffee"></i>
     <i class="fa fa-plug"></i><br>
     <input type="button" value="Book Room"><input type="button" value="Join" style="margin-left: 10px">
+  </div>
+</div>
+<br>
+<div class="w3-container" style="height: 310px">
+<div id='map'></div>
+</div>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FwcGllIiwiYSI6ImNrYmY0MHlhbTBtNWUydHAyYzNvOTdmdDEifQ.X8L3gYbxMMUQ3be2AirG1Q';
+  var map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/mapbox/streets-v10',
+  center: [52.33370,4.86630], // starting position
+  zoom: 12
+});
+// set the bounds of the map
+var bounds = [[51.33370,4.76630], [53.33370,4.966630]];
+map.setMaxBounds(bounds);
+
+// initialize the map canvas to interact with later
+var canvas = map.getCanvasContainer();
+
+// an arbitrary start will always be the same
+// only the end or destination will change
+var start = [52.33370,4.86630];
+
+
+</script>
+<br>
+<div class="w3-cell-row">
+  <div class="w3-container">
+    <ul class="w3-ul w3-card-4">
+      <li class="w3-bar">
+        <div class="w3-bar-item">
+          <span class="w3-large">Yael</span><br>
+          <span>BSC computer science</span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <div class="w3-bar-item">
+          <span class="w3-large">Bjorn</span><br>
+          <span>BSC computer science</span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <div class="w3-bar-item">
+          <span class="w3-large">Milos</span><br>
+          <span>BSC computer science</span>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>
 <hr>
