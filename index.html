@@ -3,13 +3,20 @@
 <title>W3.CSS</title>
 <style type="text/css">
 
-header{background-color: #007ecc;}   /* red */
+header{
+  background-color: #007ecc;
+  position: fixed;
+  }
+#search {
+
+}
 
 footer{background-color: #007ecc;}   /* red */
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <body style="max-width:600px">
 
 <nav class="w3-sidebar w3-bar-block w3-card" id="mySidebar">
@@ -17,21 +24,22 @@ footer{background-color: #007ecc;}   /* red */
   <span onclick="closeSidebar()" class="w3-button w3-display-topright w3-large">X</span>
   <br>
 </div>
-<a class="w3-bar-item w3-button" href="#">Home</a>
+<a class="w3-bar-item w3-button" href="#">Room Finder</a>
 <a class="w3-bar-item w3-button" href="#">Find Room</a>
 <a class="w3-bar-item w3-button" href="#">Book Room</a>
+<a class="w3-bar-item w3-button" href="#">About</a>
 </nav>
 
 <header id="menu" class="w3-bar w3-card">
   <button class="w3-bar-item w3-button w3-xxxlarge w3-hover-theme" onclick="openSidebar()">&#9776;</button>
-  <h1 class="w3-bar-item">Home</h1>
+  <h1 class="w3-bar-item">Room Finder</h1>
 </header>
 
 <div class="w3-container">
 <hr>
-<form class="w3-container">
-  <label>Find Room:</label>
-  <input class="w3-input" type="text">
+<form id="search" class="w3-container">
+  <label><h3>Find Room:</h3></label>
+  <input type="search" value="" placeholder="Search"><br>
   <input class="w3-check" type="checkbox" checked="checked">
   <label>Available</label>
 </form>
