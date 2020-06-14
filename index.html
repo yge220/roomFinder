@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
 <title>W3.CSS</title>
+<style type="text/css">
+
+header{background-color: #007ecc;}   /* red */
+
+footer{background-color: #007ecc;}   /* red */
+</style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body style="max-width:600px">
 
 <nav class="w3-sidebar w3-bar-block w3-card" id="mySidebar">
-<div class="w3-container w3-theme-d2">
+<div class="w3-container">
   <span onclick="closeSidebar()" class="w3-button w3-display-topright w3-large">X</span>
   <br>
 </div>
@@ -16,7 +22,7 @@
 <a class="w3-bar-item w3-button" href="#">Book Room</a>
 </nav>
 
-<header class="w3-bar w3-card w3-theme">
+<header id="menu" class="w3-bar w3-card">
   <button class="w3-bar-item w3-button w3-xxxlarge w3-hover-theme" onclick="openSidebar()">&#9776;</button>
   <h1 class="w3-bar-item">Home</h1>
 </header>
@@ -26,12 +32,17 @@
 <form class="w3-container">
   <label>Find Room:</label>
   <input class="w3-input" type="text">
+  <input class="w3-check" type="checkbox" checked="checked">
+  <label>Available</label>
 </form>
 <hr>
 <div class="w3-cell-row">
   <div class="w3-cell w3-container">
     <h3>NU-4A-06</h3>
     <p>The response to the animations was ridiculous.</p>
+    <i class="fa fa-coffee"></i>
+    <i class="fa fa-plug"></i><br>
+    <input type="button" value="Book Room">
   </div>
 </div>
 <hr>
@@ -39,6 +50,7 @@
   <div class="w3-cell w3-container">
     <h3>WN-KC137</h3>
     <p>Touching, gripping and genuinely well made.</p>
+    <i class="fa fa-wheelchair"></i>
   </div>
 </div>
 <hr>
@@ -51,7 +63,7 @@
 <hr>
 </div>
 
-<footer class="w3-container w3-theme w3-margin-top">
+<footer class="w3-container w3-theme w3-margin-top" style="background-color: #007ecc">
   <h3>Footer</h3>
 </footer>
 
