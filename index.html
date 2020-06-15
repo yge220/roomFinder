@@ -8,38 +8,6 @@
 
 
 <body style="max-width:600px">
-<div class="filter w3-container" id='filterMenu' style="">
-<form>
-  <label class="switch">
-    <input type="checkbox" onclick="">
-    <span class="slider round"></span>
-  </label>   <i style=""class="w3-xxlarge fa fa-coffee"></i><br>
-  <label class="switch">
-    <input type="checkbox">
-    <span class="slider round"></span>
-  </label>   <i style=""class="w3-xxlarge fa fa-wheelchair"></i><br>
-  <label class="switch">
-    <input type="checkbox">
-    <span class="slider round"></span>
-  </label>   <i style=""class="w3-xxlarge fa fa-plug"></i><br>
-  <label class="switch">
-    <input type="checkbox">
-    <span class="slider round"></span>
-  </label>   <i style=""class="w3-xxlarge fa fa-desktop"></i><br>
-  <label class="switch">
-    <input type="checkbox">
-    <span class="slider round"></span>
-  </label>   <i style=""class="w3-xxlarge fa fa-video-camera"></i><br>
-  <label class="switch">
-    <input type="checkbox">
-    <span class="slider round"></span>
-  </label>   <i style="" class="w3-xxlarge fa fa-flask"></i><br>
-
-
-  <hr>
-  <input class="" type="button" value="apply" onclick="applyFilters()">  <input class="" onclick="cancelButton()" type="button" value="cancel">
-</form>
-</div>
 
 <nav class="w3-sidebar w3-bar-block w3-card" id="mySidebar">
 <div class="w3-container">
@@ -66,6 +34,38 @@
   <label>Available</label>
   <input class="button" type="button" value="Filters" onclick="filterMenu()">
 </form>
+
+<div class="filter w3-container" id='filterMenu'>
+<form>
+  <label class="switch">
+    <input type="checkbox" onclick="">
+    <span class="slider round"></span>
+  </label>   <i style=""class="w3-xxlarge fa fa-coffee"></i><br>
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider round"></span>
+  </label>   <i style=""class="w3-xxlarge fa fa-wheelchair"></i><br>
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider round"></span>
+  </label>   <i style=""class="w3-xxlarge fa fa-plug"></i><br>
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider round"></span>
+  </label>   <i style=""class="w3-xxlarge fa fa-desktop"></i><br>
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider round"></span>
+  </label>   <i style=""class="w3-xxlarge fa fa-video-camera"></i><br>
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider round"></span>
+  </label>   <i style="" class="w3-xxlarge fa fa-flask"></i><br>
+  <hr>
+  <input class="" type="button" value="apply" onclick="filterMenu()">
+</form>
+</div>
+
 <hr>
 <div id="coffee" class="w3-cell-row hide">
   <div class="w3-cell w3-container">
@@ -137,23 +137,19 @@ function toggleAvailable() {
   }
 }
 function filterMenu() {
-  var x = document.getElementById("availableButton");
-  x.style.visibility = "hidden";
-  var menu = document.getElementById('filterMenu');
-  menu.style.visibility = "visible";
+  var x = document.getElementById("filterMenu");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 }
-function cancelButton() {
-  var x = document.getElementById("availableButton");
+/*function applyFilters() {
+  var x = document.getElementById("filterMenu");
+  var menu = document.getElementById('filterMenu');
   x.style.visibility = "visible";
-  var menu = document.getElementById('filterMenu');
   menu.style.visibility = "hidden";
-}
-function applyFilters() {
-  var x = document.getElementById("availableButton");
-  x.style.visibility = "visible";
-  var menu = document.getElementById('filterMenu');
-  menu.style.visibility = "hidden";
-}
+}*/
 </script>
 
 </body>

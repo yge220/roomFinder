@@ -19,15 +19,14 @@ footer{background-color: #007ecc;}   /* red */
   display: inline-block;
   font-size: 16px;
 }
+
 #filterMenu
 {
-  position: absolute;
-  margin-top: 20%;
-  margin-left: 12.5%;
+  position: relative;
    min-width: 75%;
    min-height: 75%;
    background: white;
-   visibility: hidden;
+   display: none;
    border-radius: 8px;
    border-style: solid;
    border-color: black;
