@@ -80,92 +80,93 @@ footer{background-color: #007ecc;}   /* red */
 <div id='map'></div>
 </div>
 <script>
-mapboxgl.accessToken = 'pk.eyJ1IjoidGVzdG1hcGV0YyIsImEiOiJja2JmNWZjaTAwOGZxMnltemxhdTd1ZnU0In0.Mvwfpta54PsNjsPoTvoWhQ';
-var map = new mapboxgl.Map({
-container: 'map',
-style: 'mapbox://styles/testmapetc/ckbf5la8e3tgu1io48wt7b1lb',
-center: [4.86576,52.33379],
-pitch: 60,
-bearing: -150,
-zoom: 16,
-});
+  mapboxgl.accessToken = 'pk.eyJ1IjoidGVzdG1hcGV0YyIsImEiOiJja2JmNWZjaTAwOGZxMnltemxhdTd1ZnU0In0.Mvwfpta54PsNjsPoTvoWhQ';
+  var map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/testmapetc/ckbf5la8e3tgu1io48wt7b1lb',
+  center: [4.86576,52.33379],
+  pitch: 60,
+  bearing: -150,
+  zoom: 16,
+  });
 
-map.addControl(new mapboxgl.NavigationControl());
-var room = new mapboxgl.Marker()
-.setLngLat([4.865484,52.333135])
-.addTo(map);
-var destination = new mapboxgl.Marker()
-.setLngLat([4.865329,52.333836])
-.addTo(map);
+  map.addControl(new mapboxgl.NavigationControl());
+  var room = new mapboxgl.Marker()
+  .setLngLat([4.865484,52.333135])
+  .addTo(map);
+  var destination = new mapboxgl.Marker()
+  .setLngLat([4.865329,52.333836])
+  .addTo(map);
 
 
 
-map.on('load', function () {
-    map.addLayer({
-        "id": "route",
-        "type": "line",
+  map.on('load', function () {
+      map.addLayer({
+          "id": "route",
+          "type": "line",
 
-        "source": {
-            "type": "geojson",
-            "data": {
-                "type": "Feature",
-                "properties": {},
-                "geometry": {
-                    "type": "LineString",
-                    "coordinates": [
-                        [4.865484,52.333135],
-                        [4.865329,52.333836]
-                    ]
-                }
-            }
-        }
-    });
-});
+          "source": {
+              "type": "geojson",
+              "data": {
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                      "type": "LineString",
+                      "coordinates": [
+                          [4.865484,52.333135],
+                          [4.865329,52.333836]
+                      ]
+                  }
+              }
+          }
+      });
+  });
 
-var geojson = {
-  type: 'FeatureCollection',
-  features: [{
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [4.865484,52.333135]
+  var geojson = {
+    type: 'FeatureCollection',
+    features: [{
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [4.865484,52.333135]
+      },
+      properties: {
+        title: 'Mapbox',
+        description: 'Washington, D.C.'
+      }
     },
-    properties: {
-      title: 'Mapbox',
-      description: 'Washington, D.C.'
-    }
-  },
-  {
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [4.865329,52.333836]
-    },
-    properties: {
-      title: 'Mapbox',
-      description: 'San Francisco, California'
-    }
-  }]
-};
-geojson.features.forEach(function(marker) {
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [4.865329,52.333836]
+      },
+      properties: {
+        title: 'Mapbox',
+        description: 'San Francisco, California'
+      }
+    }]
+  };
+  geojson.features.forEach(function(marker) {
 
-  // create a HTML element for each feature
-  var el = document.createElement('div');
-  el.className = 'marker';
+    // create a HTML element for each feature
+    var el = document.createElement('div');
+    el.className = 'marker';
 
-  // make a marker for each feature and add to the map
-  new mapboxgl.Marker(el)
-    .setLngLat(marker.geometry.coordinates)
-    .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-      .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
-    .addTo(map);
-});
+    // make a marker for each feature and add to the map
+    new mapboxgl.Marker(el)
+      .setLngLat(marker.geometry.coordinates)
+      .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+        .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
+      .addTo(map);
+  });
 
 
 </script>
 <br>
 <div class="w3-cell-row">
   <div class="w3-container">
+    <h3>Participants:</h3>
     <ul id="userList" class="w3-ul w3-card-4">
       <li class="w3-bar">
         <div class="w3-bar-item">
