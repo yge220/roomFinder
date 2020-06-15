@@ -38,36 +38,35 @@
 <div class="filter w3-container" id='filterMenu'>
 <form>
   <label class="switch">
-    <input type="checkbox" onclick="">
+    <input type="checkbox" onclick="filterSearch('coffee')">
     <span class="slider round"></span>
   </label>   <i style=""class="w3-xxlarge fa fa-coffee"></i><br>
   <label class="switch">
-    <input type="checkbox">
+    <input type="checkbox" onclick="filterSearch('wheelchair')">
     <span class="slider round"></span>
   </label>   <i style=""class="w3-xxlarge fa fa-wheelchair"></i><br>
   <label class="switch">
-    <input type="checkbox">
+    <input type="checkbox" onclick="filterSearch('plug')">
     <span class="slider round"></span>
   </label>   <i style=""class="w3-xxlarge fa fa-plug"></i><br>
   <label class="switch">
-    <input type="checkbox">
+    <input type="checkbox" onclick="filterSearch('desktop')">
     <span class="slider round"></span>
   </label>   <i style=""class="w3-xxlarge fa fa-desktop"></i><br>
   <label class="switch">
-    <input type="checkbox">
+    <input type="checkbox" onclick="filterSearch('video-camera')">
     <span class="slider round"></span>
   </label>   <i style=""class="w3-xxlarge fa fa-video-camera"></i><br>
   <label class="switch">
-    <input type="checkbox">
+    <input type="checkbox" onclick="filterSearch('flask')">
     <span class="slider round"></span>
   </label>   <i style="" class="w3-xxlarge fa fa-flask"></i><br>
   <hr>
-  <input class="" type="button" value="apply" onclick="filterMenu()">
 </form>
 </div>
 
 <hr>
-<div id="coffee" class="w3-cell-row hide">
+<div class="w3-cell-row hide coffee plug">
   <div class="w3-cell w3-container">
     <h3><i class="fa fa-lock jemoeder"></i>   NU-4A-06    <i style="padding-left: 30px;"class="fa fa-male w3-normal"></i>   10/20</h3>
     <p>HCI last minute session</p>
@@ -78,32 +77,65 @@
   </div>
 </div>
 <hr>
-<div class="w3-cell-row ">
+<div class="w3-cell-row hide coffee">
   <div class="w3-cell w3-container">
-    <h3><i style="color: green" class="fa fa-unlock"></i>  NU-4A-06    <i style="padding-left: 30px;"class="fa fa-male w3-normal"></i>   10/20</h3>
-    <p></p>
+    <h3><i class="fa fa-lock jemoeder"></i>   NU-4A-06    <i style="padding-left: 30px;"class="fa fa-male w3-normal"></i>   10/20</h3>
+    <p>HCI last minute session</p>
     <i class="fa fa-coffee"></i>
-    <i class="fa fa-plug"></i><br>
+    <br>
+    <h5 style="color: red;">booked: 11.00 - 12.00</h5>
     <a href="bookRoom.html"><input type="button" value="Book Room"></a><a href="view.html"><input type="button" value="View" style="margin-left: 10px"></a>
   </div>
 </div>
 <hr>
-<div class="w3-cell-row">
+<div class="w3-cell-row wheelchair">
   <div class="w3-cell w3-container">
     <h3><i style="color: green" class="fa fa-unlock"></i>  NU-4A-06    <i style="padding-left: 30px;"class="fa fa-male w3-normal"></i>   10/20</h3>
     <p></p>
-    <i class="fa fa-coffee"></i>
-    <i class="fa fa-plug"></i><br>
+    <i class="fa fa-wheelchair"></i>
+    <br>
     <a href="bookRoom.html"><input type="button" value="Book Room"></a><a href="view.html"><input type="button" value="View" style="margin-left: 10px"></a>
   </div>
 </div>
 <hr>
-<div class="w3-cell-row">
+<div class="w3-cell-row plug">
+  <div class="w3-cell w3-container">
+    <h3><i style="color: green" class="fa fa-unlock"></i>  NU-4A-06    <i style="padding-left: 30px;"class="fa fa-male w3-normal"></i>   10/20</h3>
+    <p></p>
+    <i class="fa fa-plug"></i>
+    <br>
+    <a href="bookRoom.html"><input type="button" value="Book Room"></a><a href="view.html"><input type="button" value="View" style="margin-left: 10px"></a>
+  </div>
+</div>
+<hr>
+<div class="w3-cell-row desktop">
   <div class="w3-cell w3-container">
     <h3><i style="color: orange" class="fa fa-unlock"></i>  NU-4A-06    <i style="padding-left: 30px;"class="fa fa-male w3-normal"></i>   10/20</h3>
     <p>Writing essays</p>
-    <i class="fa fa-coffee"></i>
-    <i class="fa fa-plug"></i><br>
+    <i class="fa fa-desktop"></i>
+    <br>
+    <h5 style="color: orange;">booked: 11.00 - 12.00</h5>
+    <a href="bookRoom.html"><input type="button" value="Book Room"></a><a href="view.html"><input type="button" value="View" style="margin-left: 10px"></a>
+  </div>
+</div>
+<hr>
+<div class="w3-cell-row video-camera">
+  <div class="w3-cell w3-container">
+    <h3><i style="color: orange" class="fa fa-unlock"></i>  NU-4A-06    <i style="padding-left: 30px;"class="fa fa-male w3-normal"></i>   10/20</h3>
+    <p>Writing essays</p>
+    <i class="fa fa-video-camera"></i>
+    <br>
+    <h5 style="color: orange;">booked: 11.00 - 12.00</h5>
+    <a href="bookRoom.html"><input type="button" value="Book Room"></a><a href="view.html"><input type="button" value="View" style="margin-left: 10px"></a>
+  </div>
+</div>
+<hr>
+<div class="w3-cell-row pencil-square">
+  <div class="w3-cell w3-container">
+    <h3><i style="color: orange" class="fa fa-unlock"></i>  NU-4A-06    <i style="padding-left: 30px;"class="fa fa-male w3-normal"></i>   10/20</h3>
+    <p>Writing essays</p>
+    <i class="fa fa-pencil-square"></i>
+    <br>
     <h5 style="color: orange;">booked: 11.00 - 12.00</h5>
     <a href="bookRoom.html"><input type="button" value="Book Room"></a><a href="view.html"><input type="button" value="View" style="margin-left: 10px"></a>
   </div>
@@ -144,12 +176,27 @@ function filterMenu() {
     x.style.display = "none";
   }
 }
-/*function applyFilters() {
-  var x = document.getElementById("filterMenu");
-  var menu = document.getElementById('filterMenu');
-  x.style.visibility = "visible";
-  menu.style.visibility = "hidden";
-}*/
+var filterBy = [];
+function filterSearch(icon) {
+  if (filterBy.includes(icon)) {
+    var index = filterBy.indexOf(icon);
+    if (index > -1) {
+       filterBy.splice(index, 1);
+    }
+  } else {
+    filterBy.push(icon);
+    var allRooms = document.getElementsByClassName('w3-cell-row');
+    for (i = 0; i < allRooms.length; i++) {
+      allRooms[i].style.display = "none";
+    }
+    for (i = 0; i < filterBy.length; i++) {
+      var iconGroup = document.getElementsByClassName(filterBy[i]);
+      for (j = 0; j < iconGroup.length; j++) {
+        iconGroup[j].style.display = "block";
+      }
+    }
+  }
+}
 </script>
 
 </body>
