@@ -54,8 +54,9 @@ footer{background-color: #007ecc;}   /* red */
   <br>
 </div>
 <a class="w3-bar-item w3-button" href="index.html">Find Room</a>
+<a class="w3-bar-item w3-button" href="campusMap.html">Campus Map</a>
 <a class="w3-bar-item w3-button" href="utilityLegend.html">Utility legend</a>
-<a class="w3-bar-item w3-button" href="#">About</a>
+<a class="w3-bar-item w3-button" href="about.html">About</a>
 </nav>
 
 <header id="menu" class="w3-bar w3-card">
@@ -100,7 +101,6 @@ var destination = new mapboxgl.Marker()
 
 
 map.on('load', function () {
-
     map.addLayer({
         "id": "route",
         "type": "line",
