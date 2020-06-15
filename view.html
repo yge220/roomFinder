@@ -16,35 +16,29 @@ footer{background-color: #007ecc;}   /* red */
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css' rel='stylesheet' />
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-      }
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css' rel='stylesheet' />
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
 
-      #map {
-        position: absolute;
-        /* top: 0;
-        bottom: 0; */
-        width: 80%;
-        height: 50%;
-      }
-    </style>
-
-
-
-
+  #map {
+    position: absolute;
+    /* top: 0;
+    bottom: 0; */
+    width: 80%;
+    height: 50%;
+  }
+</style>
 <body style="max-width:600px">
-
 <nav class="w3-sidebar w3-bar-block w3-card" id="mySidebar">
 <div class="w3-container">
   <span onclick="closeSidebar()" class="w3-button w3-display-topright w3-large">X</span>
   <br>
 </div>
-<a class="w3-bar-item w3-button" href="#">Room Finder</a>
-<a class="w3-bar-item w3-button" href="#">Find Room</a>
-<a class="w3-bar-item w3-button" href="#">Book Room</a>
+<a class="w3-bar-item w3-button" href="index.html">Find Room</a>
+<a class="w3-bar-item w3-button" href="utilityLegend.html">Utility legend</a>
 <a class="w3-bar-item w3-button" href="#">About</a>
 </nav>
 
@@ -61,7 +55,7 @@ footer{background-color: #007ecc;}   /* red */
     <p>studygroup for HCI</p>
     <i class="fa fa-coffee"></i>
     <i class="fa fa-plug"></i><br>
-    <input type="button" value="Book Room"><input type="button" onclick="addNewUser()" value="Join" style="margin-left: 10px">
+    <a href="bookRoom.html"><input type="button" value="Book Room"></a><input type="button" onclick="addNewUser()" value="Join" style="margin-left: 10px">
   </div>
 </div>
 <br>
@@ -69,9 +63,6 @@ footer{background-color: #007ecc;}   /* red */
 <div id='map'></div>
 </div>
 <script>
-    // TO MAKE THE MAP APPEAR YOU MUST
-    // ADD YOUR ACCESS TOKEN FROM
-    // https://account.mapbox.com
 mapboxgl.accessToken = 'pk.eyJ1IjoidGVzdG1hcGV0YyIsImEiOiJja2JmNWZjaTAwOGZxMnltemxhdTd1ZnU0In0.Mvwfpta54PsNjsPoTvoWhQ';
 var map = new mapboxgl.Map({
 container: 'map',
@@ -94,14 +85,12 @@ var room = new mapboxgl.Marker()
           <span>BSC computer science</span>
         </div>
       </li>
-
       <li id="someUser" class="w3-bar">
         <div class="w3-bar-item">
           <span class="w3-large">Bjorn</span><br>
           <span>BSC computer science</span>
         </div>
       </li>
-
       <li class="w3-bar">
         <div class="w3-bar-item">
           <span class="w3-large">Milos</span><br>

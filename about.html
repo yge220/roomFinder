@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<style type="text/css">
+/* pk.eyJ1IjoiZ2FwcGllIiwiYSI6ImNrYmY0MHlhbTBtNWUydHAyYzNvOTdmdDEifQ.X8L3gYbxMMUQ3be2AirG1Q */
+header{
+  background-color: #007ecc;
+  }
+#search {
+
+}
+footer{background-color: #007ecc;}   /* red */
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #map {
+        position: absolute;
+        /* top: 0;
+        bottom: 0; */
+        width: 80%;
+        height: 50%;
+      }
+    </style>
+
+
+
+
+<body style="max-width:600px">
+
+<nav class="w3-sidebar w3-bar-block w3-card" id="mySidebar">
+<div class="w3-container">
+  <span onclick="closeSidebar()" class="w3-button w3-display-topright w3-large">X</span>
+  <br>
+</div>
+<a class="w3-bar-item w3-button" href="index.html">Find Room</a>
+<a class="w3-bar-item w3-button" href="utilityLegend.html">Utility legend</a>
+<a class="w3-bar-item w3-button" href="about.html">About</a>
+</nav>
+<header id="menu" class="w3-bar w3-card">
+  <button class="w3-bar-item w3-button w3-xxxlarge w3-hover-theme" onclick="openSidebar()">&#9776;</button>
+  <a href="index.html"><h1 class="w3-bar-item">Room Finder</h1></a>
+</header>
+<div class="w3-container">
+<hr>
+
+<hr>
+</div>
+<script>
+closeSidebar();
+function openSidebar() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeSidebar() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+function addNewUser() {
+  var node = document.getElementById("someUser");
+  document.getElementById("userList").appendChild(node);
+}
+</script>
+
+</body>
