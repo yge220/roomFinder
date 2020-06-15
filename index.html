@@ -195,15 +195,21 @@ function filterSearch(icon) {
     }
   } else {
     filterBy.push(icon);
+  }
+  var allRooms = document.getElementsByClassName('w3-cell-row');
+  for (i = 0; i < allRooms.length; i++) {
+    allRooms[i].style.display = "none";
+  }
+  for (i = 0; i < filterBy.length; i++) {
+    var iconGroup = document.getElementsByClassName(filterBy[i]);
+    for (j = 0; j < iconGroup.length; j++) {
+      iconGroup[j].style.display = "block";
+    }
+  }
+  if (filterBy.length === 0) {
     var allRooms = document.getElementsByClassName('w3-cell-row');
     for (i = 0; i < allRooms.length; i++) {
-      allRooms[i].style.display = "none";
-    }
-    for (i = 0; i < filterBy.length; i++) {
-      var iconGroup = document.getElementsByClassName(filterBy[i]);
-      for (j = 0; j < iconGroup.length; j++) {
-        iconGroup[j].style.display = "block";
-      }
+      allRooms[i].style.display = "block";
     }
   }
 }
