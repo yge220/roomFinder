@@ -55,7 +55,7 @@ footer{background-color: #007ecc;}   /* red */
     <p>studygroup for HCI</p>
     <i class="fa fa-coffee"></i>
     <i class="fa fa-plug"></i><br>
-    <a href="bookRoom.html"><input type="button" value="Book Room"></a><input type="button" onclick="addNewUser()" value="Join" style="margin-left: 10px">
+    <a href="bookRoom.html"><input type="button" value="Book Room"></a><input type="button" id="joinButton" onclick="addNewUser()" value="Join" style="margin-left: 10px"><input id="leaveButton" type="button" onclick="removeNewUser()" value="Leave" style="margin-left: 10px; visibility: hidden;">
   </div>
 </div>
 <br>
@@ -68,9 +68,12 @@ var map = new mapboxgl.Map({
 container: 'map',
 style: 'mapbox://styles/testmapetc/ckbf5la8e3tgu1io48wt7b1lb',
 center: [4.86576,52.33379],
-zoom: 16
+pitch: 60,
+bearing: -150,
+zoom: 16,
 });
 
+map.addControl(new mapboxgl.NavigationControl());
 var room = new mapboxgl.Marker()
 .setLngLat([4.865484,52.333135])
 .addTo(map);
@@ -145,8 +148,31 @@ function closeSidebar() {
 }
 
 function addNewUser() {
-  var node = document.getElementById("someUser");
-  document.getElementById("userList").appendChild(node);
+  var numElements = document.getElementById("userList").childElementCount;
+  if(numElements <= 3){
+    var node = document.createElement("LI");
+    node.className = "w3-bar";
+    node.innerHTML = "<div class='w3-bar-item'><span class='w3-large'>new User</span><br><span>BSC computer science</span></div>"
+    document.getElementById("userList").appendChild(node);
+
+    var leaveButton = document.getElementById("leaveButton");
+    leaveButton.style.visibility = "visible";
+
+    var joinButton = document.getElementById("joinButton");
+    joinButton.style.visibility = "hidden";
+  }
+}
+
+function removeNewUser() {
+  var numElements = document.getElementById("userList").childElementCount;
+  if(numElements > 3){
+    var node = document.getElementById("userList").lastChild;
+    node.remove();
+    var leaveButton = document.getElementById("leaveButton");
+    leaveButton.style.visibility = "hidden";
+    var joinButton = document.getElementById("joinButton");
+    joinButton.style.visibility = "visible";
+  }
 }
 </script>
 

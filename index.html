@@ -39,14 +39,26 @@ footer{background-color: #007ecc;}   /* red */
 <form id="search" class="w3-container">
   <label><h3>Find Room:</h3></label>
   <input class="w3-input w3-animate-input" type="text" style="width:50%">
-  <input class="w3-check" type="checkbox" checked="checked">
+  <input class="w3-check" type="checkbox" onclick="toggleAvailable()">
   <label>Available</label>
 </form>
 <hr>
-<div class="w3-cell-row">
+<div class="w3-cell-row hide">
   <div class="w3-cell w3-container">
     <h3>NU-4A-06</h3>
-    <p>The response to the animations was ridiculous.</p>
+    <p>HCI last minute session</p>
+    <i class="fa fa-coffee"></i>
+    <i class="fa fa-plug"></i><br>
+    <h4 style="color: red;">Closed</h4>
+    <h5 style="color: red;">booked: 11.00 - 12.00</h5>
+    <a href="bookRoom.html"><input type="button" value="Book Room"></a><a href="view.html"><input type="button" value="View" style="margin-left: 10px"></a>
+  </div>
+</div>
+<hr>
+<div class="w3-cell-row ">
+  <div class="w3-cell w3-container">
+    <h3>NU-4A-06</h3>
+    <p></p>
     <i class="fa fa-coffee"></i>
     <i class="fa fa-plug"></i><br>
     <h4 style="color: green;">open</h4>
@@ -54,11 +66,10 @@ footer{background-color: #007ecc;}   /* red */
   </div>
 </div>
 <hr>
-<hr>
 <div class="w3-cell-row">
   <div class="w3-cell w3-container">
     <h3>NU-4A-06</h3>
-    <p>The response to the animations was ridiculous.</p>
+    <p></p>
     <i class="fa fa-coffee"></i>
     <i class="fa fa-plug"></i><br>
     <h4 style="color: green;">open</h4>
@@ -69,15 +80,16 @@ footer{background-color: #007ecc;}   /* red */
 <div class="w3-cell-row">
   <div class="w3-cell w3-container">
     <h3>NU-4A-06</h3>
-    <p>The response to the animations was ridiculous.</p>
+    <p>Writing essays</p>
     <i class="fa fa-coffee"></i>
     <i class="fa fa-plug"></i><br>
-    <h4 style="color: orange;">booked</h4>
+    <h4 style="color: green;">Open</h4>
     <h5 style="color: orange;">booked: 11.00 - 12.00</h5>
     <a href="bookRoom.html"><input type="button" value="Book Room"></a><a href="view.html"><input type="button" value="View" style="margin-left: 10px"></a>
   </div>
 </div>
 <hr>
+
 </div>
 <footer class="w3-container w3-theme w3-margin-top" style="background-color: #007ecc">
   <h3>Footer</h3>
@@ -91,6 +103,18 @@ function openSidebar() {
 
 function closeSidebar() {
   document.getElementById("mySidebar").style.display = "none";
+}
+
+function toggleAvailable() {
+  var x = document.getElementsByClassName("hide");
+  var i;
+  for (i = 0; i < x.length; i++) {
+    if (x[i].style.display === 'none') {
+      x[i].style.display = 'block';
+    } else {
+      x[i].style.display = 'none'
+    }
+  }
 }
 </script>
 
