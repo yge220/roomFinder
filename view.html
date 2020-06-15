@@ -68,12 +68,41 @@ var map = new mapboxgl.Map({
 container: 'map',
 style: 'mapbox://styles/testmapetc/ckbf5la8e3tgu1io48wt7b1lb',
 center: [4.86576,52.33379],
-zoom: 15
+zoom: 16
 });
 
 var room = new mapboxgl.Marker()
 .setLngLat([4.865484,52.333135])
 .addTo(map);
+var destination = new mapboxgl.Marker()
+.setLngLat([4.865329,52.333836])
+.addTo(map);
+
+
+map.on('load', function () {
+
+    map.addLayer({
+        "id": "route",
+        "type": "line",
+
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "Feature",
+                "properties": {},
+                "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                        [4.865484,52.333135],
+                        [4.865329,52.333836]
+                    ]
+                }
+            }
+        }
+    });
+
+});
+
 </script>
 <br>
 <div class="w3-cell-row">
