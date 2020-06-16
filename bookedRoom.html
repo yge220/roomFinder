@@ -11,6 +11,36 @@ header{
 }
 footer{background-color: #007ecc;}   /* red */
 </style>
+<style media="screen">
+/* Place the navbar at the bottom of the page, and make it stick */
+.navbar {
+background-color: #007ecc;
+overflow: hidden;
+position: fixed;
+bottom: 0;
+width: 100%;
+}
+/* Style the links inside the navigation bar */
+.navbar a {
+float: left;
+width:33%;
+display: block;
+color: #f2f2f2;
+text-align: center;
+padding: 12px;
+text-decoration: none;
+font-size: 9px;
+}
+.navbar a i {
+font-size: 26px;
+display:block;
+}
+
+/* Add a color to the active/current link */
+.navbar a.active {
+color: white;
+}
+</style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -89,7 +119,11 @@ footer{background-color: #007ecc;}   /* red */
 <hr>
 </div>
 
-
+<div class="navbar">
+  <a href="index.html" class="active" style="background-color:#19a7ff"><i class="fa fa-search"></i>Find Room</a>
+  <a href="campusMap.html"><i class="fa fa-map-marker"></i>Campus Map</a>
+  <a href="utilityLegend.html"><i class="fa fa-filter"></i>Utility legend</a>
+</div>
 <script>
 closeSidebar();
 function openSidebar() {
