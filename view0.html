@@ -67,11 +67,11 @@ footer{background-color: #007ecc;}   /* red */
 <hr>
 <div class="w3-cell-row">
   <div class="w3-cell w3-container">
-    <h3>NU-4A-06</h3>
-    <p>studygroup for HCI</p>
+    <h3>HG-KC07</h3>
+    <p>""</p>
     <i class="fa fa-coffee"></i>
     <i class="fa fa-plug"></i><br>
-    <a href="bookedRoom.html"><input type="button" value="Book Room"></a><input id="leaveButton" type="button" onclick="removeNewUser()" value="Leave" style="margin-left: 10px; visibility: hidden;">
+    <a href="openRoom.html"><input type="button" value="Book Room"></a><input type="button" id="joinButton" onclick="addNewUser()" value="Join" style="margin-left: 10px"><input id="leaveButton" type="button" onclick="removeNewUser()" value="Leave" style="margin-left: 10px; visibility: hidden;">
   </div>
 </div>
 <br>
@@ -94,7 +94,7 @@ footer{background-color: #007ecc;}   /* red */
   .setLngLat([4.865484,52.333135])
   .addTo(map);
   var destination = new mapboxgl.Marker()
-  .setLngLat([4.865329,52.333836])
+  .setLngLat([4.862663,52.333211])
   .addTo(map);
 
 
@@ -113,7 +113,7 @@ footer{background-color: #007ecc;}   /* red */
                       "type": "LineString",
                       "coordinates": [
                           [4.865484,52.333135],
-                          [4.865329,52.333836]
+                          [4.862663,52.333211]
                       ]
                   }
               }
@@ -138,7 +138,7 @@ footer{background-color: #007ecc;}   /* red */
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [4.865329,52.333836]
+        coordinates: [4.862663,52.333211]
       },
       properties: {
         title: 'Mapbox',
