@@ -30,9 +30,9 @@
 <form id="search" class="w3-container">
   <label><h3>Find Room:</h3></label>
   <input class="w3-input w3-animate-input" type="text" style="width:50%">
-  <input class="w3-check" id="availableButton" type="checkbox" onclick="toggleAvailable()" style="">
+  <input class="w3-check" id="availableButton" type="checkbox" onclick="toggleAvailable()" style="" checked>
   <label>Available</label>
-  <input class="button" type="button" value="Other Filters" onclick="filterMenu()">
+  <input style="margin-top: 6px;" class="button" type="button" value="Other Filters" onclick="filterMenu()">
 </form>
 
 <div class="filter w3-container" id='filterMenu'>
@@ -171,10 +171,10 @@ function toggleAvailable() {
   var x = document.getElementsByClassName("hide");
   var i;
   for (i = 0; i < x.length; i++) {
-    if (x[i].style.display === 'none') {
-      x[i].style.display = 'block';
+    if (x[i].style.display === 'block') {
+      x[i].style.display = 'none';
     } else {
-      x[i].style.display = 'none'
+      x[i].style.display = 'block'
     }
   }
 }

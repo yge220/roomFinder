@@ -9,6 +9,12 @@ footer{background-color: #007ecc;}   /* red */
 .jemoeder{
   color: red;
 }
+
+.hide
+{
+  display: none;
+}
+
 .button {
   background-color: #007ecc; /* Green */
   border-radius: 8px;
