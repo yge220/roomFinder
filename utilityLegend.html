@@ -2,7 +2,34 @@
 <html>
 <title>Room Finder</title>
 <style type="text/css">
+/* Place the navbar at the bottom of the page, and make it stick */
+.navbar {
+  background-color: #007ecc;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+/* Style the links inside the navigation bar */
+.navbar a {
+  float: left;
+  width:33%;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 9px;
+}
+.navbar a i {
+  font-size: 26px;
+  display:block;
+}
 
+/* Add a color to the active/current link */
+.navbar a.active {
+  color: white;
+}
 header{
   background-color: #007ecc;
   }
@@ -114,7 +141,11 @@ header{
 <hr>
 </div>
 
-
+<div class="navbar">
+  <a href="index.html" class="active" ><i class="fa fa-search"></i>Find Room</a>
+  <a href="campusMap.html"><i class="fa fa-map-marker"></i>Campus Map</a>
+  <a href="utilityLegend.html" style="background-color:#19a7ff"><i class="fa fa-filter" ></i>Utility legend</a>
+</div>
 <script>
 closeSidebar();
 function openSidebar() {
